@@ -1,0 +1,150 @@
+/*** custom variables ***/
+:root {
+    /** primary colors **/
+    --clr-orange: hsl(31, 77%, 52%);
+    --clr-dark-cyan: hsl(184, 100%, 22%);
+    --clr-very-dark-cyan: hsl(179, 100%, 13%);
+
+    /** neutral colors **/
+    /* paragraphs */
+    --clr-white-transparent: hsla(0, 0%, 100%, 0.75);
+
+    /* background, headings, buttons */
+    --clr-very-light-gray: hsl(0, 0%, 95%);
+
+    /** typography **/
+    --ff-text: 'Lexend Deca', sans-serif;
+    --ff-header: 'Big Shoulders Display', cursive;
+
+    --fs-text: 15px;
+    --fs-header: 40px;
+
+    --fw-normal: 400;
+    --fw-bold: 700;
+
+}
+
+/*** reset ***/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*** utility classes ***/
+
+
+
+/*** set-up ***/
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    /* min-width: 375px; */
+    width: 100vw;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    font-family: var(--ff-text);
+    font-size: var(--fs-text);
+    font-weight: var(--fw-header);
+    color: var(--clr-white-transparent);
+
+    background-color: var(--clr-very-light-gray);
+
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+/*** components ***/
+.card {
+    flex-shrink: 0;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-areas:
+        'section1'
+        'section2'
+        'section3';
+
+    width: 328px;
+    height: 1325px;
+    margin-top: 15px;
+
+}
+
+.card__section {
+    padding: 48px 50px;
+}
+
+.card__section__header {
+    margin: 34px 0 25px 0;
+    font-family: var(--ff-header);
+    font-size: var(--fs-header);
+    font-weight: var(--fw-bold);
+    color: var(--clr-very-light-gray);
+    text-transform: uppercase;
+}
+
+.card__section__text {
+    line-height: 1.7;
+}
+
+.card__section__button {
+    width: 145px;
+    height: 48px;
+    margin-top: 22px;
+    border: none;
+    font-family: var(--ff-text);
+    font-size: var(--ff-text);
+    background-color: var(--clr-very-light-gray);
+    border-radius: 48px;
+}
+
+/*** section specific styles  ***/
+.sedans {
+    background-color: var(--clr-orange);
+    border-radius: 10px 10px 0 0;
+}
+
+.sedans > button {
+    color: var(--clr-orange);
+}
+
+.SUVs {
+    background-color: var(--clr-dark-cyan);
+}
+
+.SUVs > button {
+    color: var(--clr-dark-cyan);
+}
+
+.luxury {
+    background-color: var(--clr-very-dark-cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+.luxury > button {
+    color: var(--clr-very-dark-cyan);
+}
+
+/*** footer ***/
+.attribution {
+    /* position: absolute; */
+    margin: 15px 0;
+    width: 100%;
+    font-size: 11px;
+    color: var(--clr-very-dark-cyan);
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
